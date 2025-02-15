@@ -27,7 +27,7 @@ pipeline {
         stage('Run Tests') {
             steps {
                 script {
-                    bat 'docker exec flask-container pytest tests/ --maxfail=1 --disable-warnings'
+                    bat 'docker exec flask-container pytest app/ --maxfail=1 --disable-warnings'
                 }
             }
         }
